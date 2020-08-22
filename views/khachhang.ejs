@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Khach Hang</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<h1><%=khachhang.TenKH%></h1>
+<ol>
+    <%donhang.map(function(v){%>
+        <li><%=v.ThoiGian%> --Tong Tien <%=v.TongTien%></li>
+       <% })%>
+
+</ol>
+</body>
+</html>

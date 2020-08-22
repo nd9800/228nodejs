@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao Don Hang</title>
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<h1>Tao Don Hang</h1>
+<form action="/luu-don-hang" method="post">
+    <select name="KhachHangID">
+     <% khs.map(e=>{%>
+        <option value="<%e.ID%>"><%=e.TenKH%>
+        <% })%>
+        </option>
+    </select>
+    <label>Chọn sp</label>
+    <ul>
+        <% sps.map(function(e){ %>
+            <li><label><input type="checkbox" name ="SanPhamID[]" value = "<%=e.ID%>"/><%=e.TenSP %>
+        <% }) %>
+                </label>
+            </li>
+    </ul>
+    <input name="TongTien" type="number" placeholder="Tổng Tiền"/> <br/>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
